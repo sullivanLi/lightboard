@@ -1,28 +1,29 @@
+var id = [];
 var audio;
-var colorWorker ;
 var timeWorker ;
+var totalLength = 49;
+
 window.onload = function() {
   audio = document.getElementById('audioPlayer');
-  
+  for(var i=0 ; i<totalLength ; i++){
+	  var j = Math.ceil((i+1)/7) ;
+	  var k = ((i+1) % 7);
+	  if(k === 0) k=7;
+ 
+	  id[i] = 'td'+j+'_'+k;
+  }
 }
 
 function play(){
 	audio.play();
 	
 	if(typeof(Worker)!=="undefined"){
-		if(typeof(colorWorker)=="undefined"){
-			colorWorker=new Worker("/assets/colorWorker.js");
-			colorWorker.onmessage = changeColor;
-		}
 		if(typeof(timeWorker)=="undefined"){
 			timeWorker = new Worker("/assets/timeWorker.js");
 			timeWorker.postMessage();
 			timeWorker.onmessage = showCurrentTime;
-		}
-		
-	}
-		
-	
+		}	
+	}	
 }
 
 function pause(){
@@ -38,22 +39,33 @@ function stop(){
 }
 
 function stopWorker(){
-	if(typeof(colorWorker)!=="undefined"){
-		colorWorker.terminate();
-		colorWorker = undefined;
+	if(typeof(timeWorker)!=="undefined"){
 		timeWorker.terminate();
 		timeWorker = undefined;
 	}
 }
 
-function changeColor(event){
-	document.getElementById(event.data.elementId).style.backgroundColor = event.data.color;
+function getColorset(ct){
+	if(ct>4)return;
+	
+	var ct_dot = ct.substr(ct.length - 1)
+	if(ct_dot != 1 && ct_dot != 3 && ct_dot != 5 && ct_dot != 7 && ct_dot != 9){
+		return;
+	}
+	console.log("ct="+ct);
+	for(var i=0 ; i<id.length ; i++){
+		changeColor(id[i], timeScript[ct][id[i]]);
+	}
+}
+
+function changeColor(id, color){
+	document.getElementById(id).style.backgroundColor = color;
 }
 
 function showCurrentTime(event){
 	var ct = new Number(audio.currentTime);
 	document.getElementById('timeText').innerHTML = ct.toFixed(1)
-	colorWorker.postMessage(ct.toFixed());
+	getColorset(ct.toFixed(1));
 }
 
 function clear(){
