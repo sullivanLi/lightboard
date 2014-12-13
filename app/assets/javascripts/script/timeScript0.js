@@ -372,3 +372,415 @@ var tc_whiteRedPink16 = {
 	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
 	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
 };
+
+var tc_center_red = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'black', td3_3:'red', td3_4:'red', td3_5:'red', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'black', td4_3:'red', td4_4:'red', td4_5:'red', td4_6:'black', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'red', td5_4:'red', td5_5:'red', td5_6:'black', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+
+var tc_center_blue = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'black', td3_3:'blue', td3_4:'blue', td3_5:'blue', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'black', td4_3:'blue', td4_4:'blue', td4_5:'blue', td4_6:'black', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'blue', td5_4:'blue', td5_5:'blue', td5_6:'black', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_center_yellow = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'black', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'black', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'black', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'black', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_center_white = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'black', td3_3:'white', td3_4:'white', td3_5:'white', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'black', td4_3:'white', td4_4:'white', td4_5:'white', td4_6:'black', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'white', td5_4:'white', td5_5:'white', td5_6:'black', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_blue_sud_yellow1 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'blue', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'black', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'black', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'black', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'black', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'blue', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_blue_sud_yellow2 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'blue', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'blue', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'black', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'black', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'blue', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'blue', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_blue_sud_yellow3 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'blue', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'blue', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'blue', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'blue', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'blue', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'blue', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_blue_sud_yellow4 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'blue', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'blue', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'blue', td3_7:'black', 
+	td4_1:'black', td4_2:'blue', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'blue', td4_7:'black', 
+	td5_1:'black', td5_2:'blue', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'blue', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'blue', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_blue_sud_yellow5 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'blue', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'blue', td2_7:'black', 
+	td3_1:'black', td3_2:'blue', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'blue', td3_7:'black', 
+	td4_1:'black', td4_2:'blue', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'blue', td4_7:'black', 
+	td5_1:'black', td5_2:'blue', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'blue', td5_7:'black', 
+	td6_1:'black', td6_2:'blue', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'blue', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_blue_sud_yellow6 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'blue', td2_3:'black', td2_4:'black', td2_5:'blue', td2_6:'blue', td2_7:'black', 
+	td3_1:'black', td3_2:'blue', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'blue', td3_7:'black', 
+	td4_1:'black', td4_2:'blue', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'blue', td4_7:'black', 
+	td5_1:'black', td5_2:'blue', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'blue', td5_7:'black', 
+	td6_1:'black', td6_2:'blue', td6_3:'blue', td6_4:'black', td6_5:'black', td6_6:'blue', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_blue_sud_yellow7 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'blue', td2_3:'black', td2_4:'blue', td2_5:'blue', td2_6:'blue', td2_7:'black', 
+	td3_1:'black', td3_2:'blue', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'blue', td3_7:'black', 
+	td4_1:'black', td4_2:'blue', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'blue', td4_7:'black', 
+	td5_1:'black', td5_2:'blue', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'blue', td5_7:'black', 
+	td6_1:'black', td6_2:'blue', td6_3:'blue', td6_4:'blue', td6_5:'black', td6_6:'blue', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_blue_sud_yellow8 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'blue', td2_3:'blue', td2_4:'blue', td2_5:'blue', td2_6:'blue', td2_7:'black', 
+	td3_1:'black', td3_2:'blue', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'blue', td3_7:'black', 
+	td4_1:'black', td4_2:'blue', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'blue', td4_7:'black', 
+	td5_1:'black', td5_2:'blue', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'blue', td5_7:'black', 
+	td6_1:'black', td6_2:'blue', td6_3:'blue', td6_4:'blue', td6_5:'blue', td6_6:'blue', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_sud_yellow1 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'red', td2_3:'blue', td2_4:'blue', td2_5:'blue', td2_6:'blue', td2_7:'black', 
+	td3_1:'black', td3_2:'blue', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'blue', td3_7:'black', 
+	td4_1:'black', td4_2:'blue', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'blue', td4_7:'black', 
+	td5_1:'black', td5_2:'blue', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'blue', td5_7:'black', 
+	td6_1:'black', td6_2:'blue', td6_3:'blue', td6_4:'blue', td6_5:'blue', td6_6:'red', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_sud_yellow2 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'red', td2_3:'blue', td2_4:'blue', td2_5:'blue', td2_6:'blue', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'blue', td3_7:'black', 
+	td4_1:'black', td4_2:'blue', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'blue', td4_7:'black', 
+	td5_1:'black', td5_2:'blue', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'blue', td6_3:'blue', td6_4:'blue', td6_5:'blue', td6_6:'red', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_sud_yellow3 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'red', td2_3:'blue', td2_4:'blue', td2_5:'blue', td2_6:'blue', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'blue', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'blue', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'blue', td6_3:'blue', td6_4:'blue', td6_5:'blue', td6_6:'red', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_sud_yellow4 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'red', td2_3:'blue', td2_4:'blue', td2_5:'blue', td2_6:'blue', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'blue', td6_3:'blue', td6_4:'blue', td6_5:'blue', td6_6:'red', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_sud_yellow5 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'red', td2_3:'blue', td2_4:'blue', td2_5:'blue', td2_6:'red', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'red', td6_3:'blue', td6_4:'blue', td6_5:'blue', td6_6:'red', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_sud_yellow6 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'red', td2_3:'blue', td2_4:'blue', td2_5:'red', td2_6:'red', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'red', td6_3:'red', td6_4:'blue', td6_5:'blue', td6_6:'red', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_sud_yellow7 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'red', td2_3:'blue', td2_4:'red', td2_5:'red', td2_6:'red', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'red', td6_3:'red', td6_4:'red', td6_5:'blue', td6_6:'red', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_sud_yellow8 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'red', td2_3:'red', td2_4:'red', td2_5:'red', td2_6:'red', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'red', td6_3:'red', td6_4:'red', td6_5:'red', td6_6:'red', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_green_sud_yellow1 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'green', td2_3:'red', td2_4:'red', td2_5:'red', td2_6:'red', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'red', td6_3:'red', td6_4:'red', td6_5:'red', td6_6:'green', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_green_sud_yellow2 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'green', td2_3:'red', td2_4:'red', td2_5:'red', td2_6:'red', td2_7:'black', 
+	td3_1:'black', td3_2:'green', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'green', td5_7:'black', 
+	td6_1:'black', td6_2:'red', td6_3:'red', td6_4:'red', td6_5:'red', td6_6:'green', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_green_sud_yellow3 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'green', td2_3:'red', td2_4:'red', td2_5:'red', td2_6:'red', td2_7:'black', 
+	td3_1:'black', td3_2:'green', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'green', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'green', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'green', td5_7:'black', 
+	td6_1:'black', td6_2:'red', td6_3:'red', td6_4:'red', td6_5:'red', td6_6:'green', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_green_sud_yellow4 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'green', td2_3:'red', td2_4:'red', td2_5:'red', td2_6:'red', td2_7:'black', 
+	td3_1:'black', td3_2:'green', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'green', td3_7:'black', 
+	td4_1:'black', td4_2:'green', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'green', td4_7:'black', 
+	td5_1:'black', td5_2:'green', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'green', td5_7:'black', 
+	td6_1:'black', td6_2:'red', td6_3:'red', td6_4:'red', td6_5:'red', td6_6:'green', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_green_sud_yellow5 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'green', td2_3:'red', td2_4:'red', td2_5:'red', td2_6:'green', td2_7:'black', 
+	td3_1:'black', td3_2:'green', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'green', td3_7:'black', 
+	td4_1:'black', td4_2:'green', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'green', td4_7:'black', 
+	td5_1:'black', td5_2:'green', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'green', td5_7:'black', 
+	td6_1:'black', td6_2:'green', td6_3:'red', td6_4:'red', td6_5:'red', td6_6:'green', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_green_sud_yellow6 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'green', td2_3:'red', td2_4:'red', td2_5:'green', td2_6:'green', td2_7:'black', 
+	td3_1:'black', td3_2:'green', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'green', td3_7:'black', 
+	td4_1:'black', td4_2:'green', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'green', td4_7:'black', 
+	td5_1:'black', td5_2:'green', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'green', td5_7:'black', 
+	td6_1:'black', td6_2:'green', td6_3:'green', td6_4:'red', td6_5:'red', td6_6:'green', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_green_sud_yellow7 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'green', td2_3:'red', td2_4:'green', td2_5:'green', td2_6:'green', td2_7:'black', 
+	td3_1:'black', td3_2:'green', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'green', td3_7:'black', 
+	td4_1:'black', td4_2:'green', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'green', td4_7:'black', 
+	td5_1:'black', td5_2:'green', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'green', td5_7:'black', 
+	td6_1:'black', td6_2:'green', td6_3:'green', td6_4:'green', td6_5:'red', td6_6:'green', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_green_sud_yellow8 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'green', td2_3:'green', td2_4:'green', td2_5:'green', td2_6:'green', td2_7:'black', 
+	td3_1:'black', td3_2:'green', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'green', td3_7:'black', 
+	td4_1:'black', td4_2:'green', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'green', td4_7:'black', 
+	td5_1:'black', td5_2:'green', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'green', td5_7:'black', 
+	td6_1:'black', td6_2:'green', td6_3:'green', td6_4:'green', td6_5:'green', td6_6:'green', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_yellow_sud_red = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'yellow', td2_3:'yellow', td2_4:'yellow', td2_5:'yellow', td2_6:'yellow', td2_7:'black', 
+	td3_1:'black', td3_2:'yellow', td3_3:'red', td3_4:'red', td3_5:'red', td3_6:'yellow', td3_7:'black', 
+	td4_1:'black', td4_2:'yellow', td4_3:'red', td4_4:'red', td4_5:'red', td4_6:'yellow', td4_7:'black', 
+	td5_1:'black', td5_2:'yellow', td5_3:'red', td5_4:'red', td5_5:'red', td5_6:'yellow', td5_7:'black', 
+	td6_1:'black', td6_2:'yellow', td6_3:'yellow', td6_4:'yellow', td6_5:'yellow', td6_6:'yellow', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_yellow_erase1 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'red', td2_4:'red', td2_5:'red', td2_6:'red', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'red', td6_3:'red', td6_4:'red', td6_5:'red', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_yellow_erase2 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'red', td2_5:'red', td2_6:'red', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'red', td6_3:'red', td6_4:'red', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_yellow_erase3 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'red', td2_6:'red', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'red', td6_3:'red', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_yellow_erase4 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'red', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'red', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_yellow_erase5 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'red', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'red', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_yellow_erase6 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'red', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'red', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_yellow_erase7 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'red', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'black', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'black', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'red', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+
+var tc_red_yellow_erase8 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'black', td3_3:'yellow', td3_4:'yellow', td3_5:'yellow', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'black', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'black', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'yellow', td5_4:'yellow', td5_5:'yellow', td5_6:'black', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_yellow_erase9 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'black', td3_3:'black', td3_4:'yellow', td3_5:'yellow', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'black', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'black', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'yellow', td5_4:'yellow', td5_5:'black', td5_6:'black', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_yellow_erase10 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'black', td3_3:'black', td3_4:'black', td3_5:'yellow', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'black', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'black', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'yellow', td5_4:'black', td5_5:'black', td5_6:'black', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_yellow_erase11 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'black', td3_3:'black', td3_4:'black', td3_5:'black', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'black', td4_3:'yellow', td4_4:'yellow', td4_5:'yellow', td4_6:'black', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'black', td5_4:'black', td5_5:'black', td5_6:'black', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};
+
+var tc_red_yellow_erase12 = {
+	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
+	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
+	td3_1:'black', td3_2:'black', td3_3:'black', td3_4:'black', td3_5:'black', td3_6:'black', td3_7:'black', 
+	td4_1:'black', td4_2:'black', td4_3:'black', td4_4:'yellow', td4_5:'black', td4_6:'black', td4_7:'black', 
+	td5_1:'black', td5_2:'black', td5_3:'black', td5_4:'black', td5_5:'black', td5_6:'black', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
+	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
+};

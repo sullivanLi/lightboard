@@ -15,8 +15,11 @@ window.onload = function() {
 }
 
 function play(){
+	var skipSec = document.getElementById('skipSec').value;
+	if(!isNaN(skipSec) && (skipSec > 0 && skipSec < 120)){
+		audio.currentTime = skipSec;
+	}
 	audio.play();
-	
 	if(typeof(Worker)!=="undefined"){
 		if(typeof(timeWorker)=="undefined"){
 			timeWorker = new Worker("/assets/timeWorker.js");
@@ -46,7 +49,7 @@ function stopWorker(){
 }
 
 function getColorset(ct){
-	if(ct>20)return;
+	if(ct>30)return;
 	
 	var ct_dot = ct.substr(ct.length - 1)
 	if(ct_dot != 1 && ct_dot != 3 && ct_dot != 5 && ct_dot != 7 && ct_dot != 9){
