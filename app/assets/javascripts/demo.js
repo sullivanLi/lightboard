@@ -49,7 +49,7 @@ function stopWorker(){
 }
 
 function getColorset(ct){
-	if(ct>30)return;
+	if(ct>60)return;
 	
 	var ct_dot = ct.substr(ct.length - 1)
 	if(ct_dot != 1 && ct_dot != 3 && ct_dot != 5 && ct_dot != 7 && ct_dot != 9){
