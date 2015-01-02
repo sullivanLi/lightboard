@@ -1198,10 +1198,10 @@ var tc_heart_5_2 = {
 var tc_heart_5_3 = {
 	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
 	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
-	td3_1:'black', td3_2:'red', td3_3:'red', td3_4:'white', td3_5:'red', td3_6:'red', td3_7:'black', 
+	td3_1:'black', td3_2:'black', td3_3:'red', td3_4:'white', td3_5:'red', td3_6:'black', td3_7:'black', 
 	td4_1:'black', td4_2:'red', td4_3:'red', td4_4:'red', td4_5:'red', td4_6:'red', td4_7:'black', 
-	td5_1:'black', td5_2:'white', td5_3:'red', td5_4:'red', td5_5:'red', td5_6:'white', td5_7:'black', 
-	td6_1:'black', td6_2:'black', td6_3:'white', td6_4:'red', td6_5:'white', td6_6:'black', td6_7:'black',
+	td5_1:'black', td5_2:'black', td5_3:'red', td5_4:'red', td5_5:'red', td5_6:'black', td5_7:'black', 
+	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'red', td6_5:'black', td6_6:'black', td6_7:'black',
 	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
 };
 
@@ -1213,14 +1213,4 @@ var tc_heart_5_4 = {
 	td5_1:'black', td5_2:'black', td5_3:'black', td5_4:'red', td5_5:'black', td5_6:'black', td5_7:'black', 
 	td6_1:'black', td6_2:'black', td6_3:'black', td6_4:'black', td6_5:'black', td6_6:'black', td6_7:'black',
 	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'black', td7_5:'black', td7_6:'black', td7_7:'black'
-};
-
-var tc_heart_5_5 = {
-	td1_1:'black', td1_2:'black', td1_3:'black', td1_4:'black', td1_5:'black', td1_6:'black', td1_7:'black', 
-	td2_1:'black', td2_2:'black', td2_3:'black', td2_4:'black', td2_5:'black', td2_6:'black', td2_7:'black', 
-	td3_1:'black', td3_2:'black', td3_3:'black', td3_4:'black', td3_5:'black', td3_6:'black', td3_7:'black', 
-	td4_1:'black', td4_2:'black', td4_3:'black', td4_4:'black', td4_5:'black', td4_6:'black', td4_7:'black', 
-	td5_1:'black', td5_2:'white', td5_3:'red', td5_4:'red', td5_5:'red', td5_6:'white', td5_7:'black', 
-	td6_1:'black', td6_2:'black', td6_3:'white', td6_4:'red', td6_5:'white', td6_6:'black', td6_7:'black',
-	td7_1:'black', td7_2:'black', td7_3:'black', td7_4:'white', td7_5:'black', td7_6:'black', td7_7:'black'
 };
