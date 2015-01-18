@@ -1,0 +1,27 @@
+<audio id="audioPlayer">
+ <source src="<%= asset_path('cantTakeMyEyeOffU_cut.mp3') %>" type="audio/mpeg""> 
+</audio>
+
+<p>Location : 
+	<select id="col">
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	  <option value="5">5</option>
+	  <option value="6">6</option>
+	  <option value="7">7</option>
+	</select>
+	-
+	<select id="row">
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	  <option value="5">5</option>
+	  <option value="6">6</option>
+	  <option value="7">7</option>
+	</select>
+</p>
+<input type="button" onclick="client_init();" value="connect">
+<p><em id="timeText">0.0</em></p>

@@ -1,0 +1,9 @@
+<audio id="audioPlayer">
+ <source src="<%= asset_path('cantTakeMyEyeOffU_cut.mp3') %>" type="audio/mpeg""> 
+</audio>
+
+<input type="button" onclick="command('GO');" value="GO">
+<input type="button" onclick="command('PAUSE');" value="PAUSE">
+<input type="button" onclick="master_init();" value="connect">
+<p><em id="timeText">0.0</em>
+<p><em id="serverInfo"></em>
