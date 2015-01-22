@@ -1,27 +1,7 @@
 var ws = null;
 var timeWorker;
 var client_location;
-
-function master_init() {
-  audio = document.getElementById('audioPlayer');
-  if(ws == null){
-	ws = new WebSocket("ws://localhost:8080");
-	  ws.onopen = function() {
-	  console.log("Connection is opened");
-	  ws.send('master');
-	}
-
-	ws.onclose = function() {
-	  console.log("Connection is closed");
-	}
-
-	ws.onmessage = function(msg) {
-	  if(msg.data.substring(0, 19) === 'client connections='){
-		document.getElementById('serverInfo').innerHTML = msg.data;
-	  }
-	}
-  } 
-}
+var timeGap;
 
 function client_init() {
   audio = document.getElementById('audioPlayer');
@@ -30,7 +10,7 @@ function client_init() {
   
   if(ws == null){
 	ws = new WebSocket("ws://localhost:8080");
-	  ws.onopen = function() {
+	ws.onopen = function() {
 	  console.log("Connection is opened");
 	  ws.send('client');
 	}
@@ -41,20 +21,24 @@ function client_init() {
 
 	ws.onmessage = function(msg) {
 	  if(msg.data === 'GO'){
-	  	ws_play();
+	  	client_play();
 	  }else if(msg.data === 'PAUSE'){
-		ws_pause();
+		client_pause();
+	  }else if(msg.data.substring(0, 11)  === 'serverTime='){
+	  	now =  (new Date()).getTime();
+	  	timeGap = msg.data.substring(11);
+		console.log(now);
+		console.log(msg.data.substring(11));
 	  }
 	}
   } 
 }
 
-function command(msg) {
-  ws.send(msg);
-  play();
+function ws_printTime(){
+	console.log((new Date()).getTime());
 }
 
-function ws_play(){
+function client_play(){
   audio.play();
   if(typeof(Worker)!=="undefined"){
     if(typeof(timeWorker)=="undefined"){
@@ -65,7 +49,7 @@ function ws_play(){
   }	
 }
 
-function ws_pause(){
+function client_pause(){
 	audio.pause();
 	stopWorker();
 }

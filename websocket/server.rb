@@ -16,6 +16,8 @@ EventMachine.run {
       elsif(msg == 'client')
         clients << ws
         masters.each{|conn| conn.send("client connections=#{clients.size}")}
+        time = Time.now.to_f * 1000
+        ws.send('serverTime=' + time.to_s[0, 13])
       else
         clients.each{|conn| conn.send(msg)}
       end
