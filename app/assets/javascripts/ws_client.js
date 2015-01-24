@@ -54,7 +54,7 @@ function client_play(playTime){
   audio.play();
   if(typeof(Worker)!=="undefined"){
     if(typeof(timeWorker)=="undefined"){
-	  timeWorker = new Worker("light/assets/timeWorker.js");
+	  timeWorker = new Worker("/light/assets/timeWorker.js");
 	  timeWorker.postMessage();
 	  timeWorker.onmessage = ws_showCurrentTime;
     }	
