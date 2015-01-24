@@ -13,7 +13,7 @@ function client_init() {
   client_location = "td"+element_col.value+"_"+element_row.value;
   
   if(ws == null){
-	ws = new WebSocket("ws://localhost:80");
+	ws = new WebSocket("ws://agtoptv.com:80");
 	ws.onopen = function() {
 	  console.log("Connection is opened");
 	  requestTime =  (new Date()).getTime();
