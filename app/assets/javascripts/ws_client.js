@@ -87,5 +87,5 @@ function setBodyColor(ct){
 	}
 	console.log(timeScript[ct][client_location]);
 	
-	document.body.style.backgroundColor = timeScript[ct][client_location];
+	document.getElementById("showArea").style.backgroundColor = timeScript[ct][client_location];
 }

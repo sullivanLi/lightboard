@@ -8,7 +8,6 @@ function master_init() {
 	  document.getElementById('btn_go').disabled=false;
 	  document.getElementById('btn_pause').disabled=false;
 	  document.getElementById('btn_connect').disabled=true;
-	  timeGap = 0;
 	}
 
 	ws.onclose = function() {
@@ -25,6 +24,12 @@ function master_init() {
 		stopTime = msg.data.substring(6);
 		console.log(msg.data);
 		client_pause(stopTime);
+	  }else if(msg.data.substring(0, 11)  === 'serverTime='){
+	  	now =  (new Date()).getTime();
+		responseTimeMs = now - requestTime
+	  	timeGap = now - msg.data.substring(11);
+		document.getElementById('timeGap').innerHTML = 'timeGap='+timeGap;
+		document.getElementById('responesTime').innerHTML = 'responseTimeMs='+responseTimeMs;
 	  }
 	  
 	}

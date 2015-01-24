@@ -13,6 +13,8 @@ EventMachine.run {
       puts msg
       if(msg == 'master')
         masters << ws
+        time = Time.now.to_f * 1000
+        ws.send('serverTime=' + time.to_s[0, 13])
       elsif(msg == 'client')
         clients << ws
         masters.each{|conn| conn.send("client connections=#{clients.size}")}
