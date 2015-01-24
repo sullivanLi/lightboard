@@ -21,12 +21,12 @@ EventMachine.run {
         time = Time.now.to_f * 1000
         ws.send('serverTime=' + time.to_s[0, 13])
       elsif(msg == 'GO')
-        time = (Time.now.to_f * 1000) + 1000
+        time = (Time.now.to_f * 1000) + 500
         sendMsg = 'GO=' + time.to_s[0, 13]
         masters.each{|conn| conn.send(sendMsg)}
         clients.each{|conn| conn.send(sendMsg)}
       elsif(msg == 'PAUSE')
-        time = (Time.now.to_f * 1000) + 1000
+        time = (Time.now.to_f * 1000) + 500
         sendMsg = 'PAUSE=' + time.to_s[0, 13]
         masters.each{|conn| conn.send(sendMsg)}
         clients.each{|conn| conn.send(sendMsg)}

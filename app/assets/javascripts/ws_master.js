@@ -4,6 +4,7 @@ function master_init() {
 	ws = new WebSocket("ws://agtoptv.com:80");
 	  ws.onopen = function() {
 	  console.log("Connection is opened");
+	  requestTime =  (new Date()).getTime();
 	  ws.send('master');
 	  document.getElementById('btn_go').disabled=false;
 	  document.getElementById('btn_pause').disabled=false;

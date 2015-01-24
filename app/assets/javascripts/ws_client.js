@@ -7,7 +7,7 @@ var timeGap;
 
 function client_init() {
   audio = document.getElementById('audioPlayer');
-  audio.volume = 0; 
+  //audio.volume = 0; 
   element_col = document.getElementById('col');
   element_row = document.getElementById('row');
   client_location = "td"+element_col.value+"_"+element_row.value;
@@ -87,5 +87,5 @@ function setBodyColor(ct){
 	}
 	console.log(timeScript[ct][client_location]);
 	
-	document.getElementById("showArea").style.backgroundColor = timeScript[ct][client_location];
+	document.body.style.backgroundColor = timeScript[ct][client_location];
 }
