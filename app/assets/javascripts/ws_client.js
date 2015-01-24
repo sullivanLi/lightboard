@@ -4,10 +4,11 @@ var client_location;
 var requestTime;
 var responseTimeMs;
 var timeGap;
+var c_audio;
 
 function client_init() {
-  audio = document.getElementById('audioPlayer');
-  //audio.volume = 0; 
+  c_audio = document.getElementById('audioPlayer');
+  audio.volume = 0; 
   element_col = document.getElementById('col');
   element_row = document.getElementById('row');
   client_location = "td"+element_col.value+"_"+element_row.value;
@@ -51,7 +52,7 @@ function client_play(playTime){
 	setTimeout("client_play()", playTime - now);
 	return;
   }
-  audio.play();
+  c_audio.play();
   if(typeof(Worker)!=="undefined"){
     if(typeof(timeWorker)=="undefined"){
 	  timeWorker = new Worker("/light/assets/timeWorker.js");
@@ -72,7 +73,7 @@ function client_pause(stopTime){
 }
 
 function ws_showCurrentTime(event){
-  var ct = new Number(audio.currentTime);
+  var ct = new Number(c_audio.currentTime);
   document.getElementById('timeText').innerHTML = ct.toFixed(2);
   document.getElementById('time').innerHTML = (new Date()).getTime();
   setBodyColor(ct.toFixed(1));
@@ -85,7 +86,5 @@ function setBodyColor(ct){
 	if(ct_dot != 1 && ct_dot != 3 && ct_dot != 5 && ct_dot != 7 && ct_dot != 9){
 		return;
 	}
-	console.log(timeScript[ct][client_location]);
-	
 	document.body.style.backgroundColor = timeScript[ct][client_location];
 }
