@@ -1,18 +1,25 @@
 var ws = null;
 var timeWorker;
 var client_location;
+var requestTime;
+var responseTimeMs;
 var timeGap;
 
 function client_init() {
   audio = document.getElementById('audioPlayer');
   audio.volume = 0; 
-  client_location = "td"+document.getElementById('col').value+"_"+document.getElementById('row').value;
+  element_col = document.getElementById('col');
+  element_row = document.getElementById('row');
+  client_location = "td"+element_col.value+"_"+element_row.value;
   
   if(ws == null){
-	ws = new WebSocket("ws://localhost:8080");
+	ws = new WebSocket("ws://localhost:80");
 	ws.onopen = function() {
 	  console.log("Connection is opened");
+	  requestTime =  (new Date()).getTime();
 	  ws.send('client');
+	  document.getElementById('btn_connect').disabled=true;
+	  document.getElementById('location').innerHTML = 'Location : '+ element_col.value + ' - ' + element_row.value;
 	}
 
 	ws.onclose = function() {
@@ -20,43 +27,54 @@ function client_init() {
 	}
 
 	ws.onmessage = function(msg) {
-	  if(msg.data === 'GO'){
-	  	client_play();
-	  }else if(msg.data === 'PAUSE'){
-		client_pause();
+	  if(msg.data.substring(0, 3) === 'GO='){
+		playTime = msg.data.substring(3);
+	  	client_play(playTime);
+	  }else if(msg.data.substring(0, 6) === 'PAUSE='){
+		stopTime = msg.data.substring(6);
+		client_pause(stopTime);
 	  }else if(msg.data.substring(0, 11)  === 'serverTime='){
 	  	now =  (new Date()).getTime();
-	  	timeGap = msg.data.substring(11);
-		console.log(now);
-		console.log(msg.data.substring(11));
+		responseTimeMs = now - requestTime
+	  	timeGap = now - msg.data.substring(11);
+		document.getElementById('timeGap').innerHTML = 'timeGap='+timeGap;
+		document.getElementById('responesTime').innerHTML = 'responseTimeMs='+responseTimeMs;
 	  }
 	}
   } 
 }
 
-function ws_printTime(){
-	console.log((new Date()).getTime());
-}
 
-function client_play(){
+function client_play(playTime){
+  now =  (new Date()).getTime() - timeGap;
+  if (now < playTime){
+	setTimeout("client_play()", playTime - now);
+	return;
+  }
   audio.play();
   if(typeof(Worker)!=="undefined"){
     if(typeof(timeWorker)=="undefined"){
-	  timeWorker = new Worker("/assets/timeWorker.js");
+	  timeWorker = new Worker("light/assets/timeWorker.js");
 	  timeWorker.postMessage();
 	  timeWorker.onmessage = ws_showCurrentTime;
     }	
   }	
 }
 
-function client_pause(){
+function client_pause(stopTime){
+    now =  (new Date()).getTime() - timeGap;
+    if (parseInt(now) < parseInt(stopTime)){
+  		setTimeout("client_pause()", stopTime - now);
+		return;
+    }
 	audio.pause();
 	stopWorker();
 }
 
 function ws_showCurrentTime(event){
   var ct = new Number(audio.currentTime);
-  document.getElementById('timeText').innerHTML = ct.toFixed(1);
+  document.getElementById('timeText').innerHTML = ct.toFixed(2);
+  document.getElementById('time').innerHTML = (new Date()).getTime();
   setBodyColor(ct.toFixed(1));
 }
 
