@@ -4,10 +4,8 @@ var client_location;
 var requestTime;
 var responseTimeMs;
 var timeGap;
-var c_audio;
 
 function client_init() {
-  c_audio = document.getElementById('audioPlayer');
   audio.volume = 0; 
   element_col = document.getElementById('col');
   element_row = document.getElementById('row');
@@ -52,7 +50,7 @@ function client_play(playTime){
 	setTimeout("client_play()", playTime - now);
 	return;
   }
-  c_audio.play();
+  audio.play();
   if(typeof(Worker)!=="undefined"){
     if(typeof(timeWorker)=="undefined"){
 	  timeWorker = new Worker("/light/assets/timeWorker.js");
@@ -73,7 +71,7 @@ function client_pause(stopTime){
 }
 
 function ws_showCurrentTime(event){
-  var ct = new Number(c_audio.currentTime);
+  var ct = new Number(audio.currentTime);
   document.getElementById('timeText').innerHTML = ct.toFixed(2);
   document.getElementById('time').innerHTML = (new Date()).getTime();
   setBodyColor(ct.toFixed(1));

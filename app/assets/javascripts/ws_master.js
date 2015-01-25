@@ -1,5 +1,4 @@
 function master_init() {
-  audio = document.getElementById('audioPlayer');
   if(ws == null){
 	ws = new WebSocket("ws://agtoptv.com:80");
 	  ws.onopen = function() {
