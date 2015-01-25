@@ -7,6 +7,10 @@ var timeGap;
 
 function client_init() {
   audio.volume = 0; 
+  //mobile can't paly bug
+  audio.play();
+  audio.pause();
+  audio.currentTime = 0;
   element_col = document.getElementById('col');
   element_row = document.getElementById('row');
   client_location = "td"+element_col.value+"_"+element_row.value;
