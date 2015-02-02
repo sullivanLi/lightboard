@@ -3,4 +3,7 @@ class WsController < ApplicationController
   end
   def client
   end
+  def display
+    render layout: "display"
+  end
 end

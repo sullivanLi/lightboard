@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get "demo/" => "demo#show"
   get "ws/m" => "ws#master"
   get "ws/c" => "ws#client"
+  get "ws/d" => "ws#display"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
