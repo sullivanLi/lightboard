@@ -19,28 +19,32 @@ pics[15] =  {pic:'<%=image_path("015.jpg")%>', comment: '巧克力'};
 pics[16] =  {pic:'<%=image_path("016.jpg")%>', comment: '筆電'};
 pics[17] =  {pic:'<%=image_path("017.jpg")%>', comment: '妳總是我最好的Model'};
 pics[18] =  {pic:'<%=image_path("018.jpg")%>', comment: '陪我到處拍照'};
-pics[19] =  {pic:'<%=image_path("028.jpg")%>', comment: '郊遊踏青'};
-pics[20] =  {pic:'<%=image_path("020.jpg")%>', comment: '甚至到關島自己拍婚紗'};
-pics[21] =  {pic:'<%=image_path("023.jpg")%>', comment: '挑戰困難一瞬間'};
-pics[22] =  {pic:'<%=image_path("030.jpg")%>', comment: '邊拍照還要邊吹泡泡'};
-pics[23] =  {pic:'<%=image_path("019.jpg")%>', comment: '即便累了一整天也還是滿滿笑容'};
-pics[24] =  {pic:'<%=image_path("021.jpg")%>', comment: '妳的笑容就是如此的陽光'};
-pics[25] =  {pic:'<%=image_path("022.jpg")%>', comment: '我是如此喜歡妳的聲音'};
-pics[26] =  {pic:'<%=image_path("024.jpg")%>', comment: '也喜歡吃妳做的菜'};
-pics[27] =  {pic:'<%=image_path("027.jpg")%>', comment: '接下來妳的生日都會有我參與'};
-pics[28] =  {pic:'<%=image_path("025.jpg")%>', comment: '我牽著妳的手'};
-pics[29] =  {pic:'<%=image_path("026.jpg")%>', comment: '一直這樣走下去'};
-pics[30] =  {pic:'<%=image_path("029.jpg")%>', comment: '所以我想跟妳說'};
+//pics[19] =  {pic:'<%=image_path("028.jpg")%>', comment: '郊遊踏青'};
+pics[19] =  {pic:'<%=image_path("020.jpg")%>', comment: '甚至到關島自己拍婚紗'};
+pics[20] =  {pic:'<%=image_path("023.jpg")%>', comment: '挑戰困難一瞬間'};
+//pics[22] =  {pic:'<%=image_path("030.jpg")%>', comment: '邊拍照還要邊吹泡泡'};
+pics[21] =  {pic:'<%=image_path("019.jpg")%>', comment: '即便累了一整天也還是滿滿笑容'};
+pics[22] =  {pic:'<%=image_path("021.jpg")%>', comment: '妳的笑容就是如此的陽光'};
+pics[23] =  {pic:'<%=image_path("022.jpg")%>', comment: '我是如此喜歡妳的聲音'};
+pics[24] =  {pic:'<%=image_path("024.jpg")%>', comment: '也喜歡吃妳做的菜'};
+pics[25] =  {pic:'<%=image_path("027.jpg")%>', comment: '接下來妳的生日都會有我參與'};
+pics[26] =  {pic:'<%=image_path("025.jpg")%>', comment: '我牽著妳的手'};
+pics[27] =  {pic:'<%=image_path("026.jpg")%>', comment: '一直這樣走下去'};
+pics[28] =  {pic:'<%=image_path("029.jpg")%>', comment: '所以我想跟妳說'};
 
 
 var index = 1; 
 
 
 window.onload = function() {
+  websocket_init("client");
   audio = document.getElementById('audioPlayer');
-  audio.play();
-  changePic();
-  
+  $( "#panel" ).hide();
+}
+
+function client_open(){}
+
+function client_play(playTime){
   if(typeof(Worker)!=="undefined"){
 	if(typeof(timeWorker)=="undefined"){
 		timeWorker = new Worker("/assets/timeWorker.js");
@@ -48,11 +52,12 @@ window.onload = function() {
 		timeWorker.onmessage = showCurrentTime;
 	}
   }	
+  audio.play();
+  changePic();
 }
 
-
 function callback() {
-	if (index > 30) return; 
+  if (index > 28) return; 
   setTimeout(function() {
     $( "#panel:visible" ).removeAttr( "style" ).fadeOut();
 	changePic();
@@ -60,9 +65,9 @@ function callback() {
 };
 
 function changePic(){
+    $( "#panel" ).hide();
     document.getElementById('panelHead').innerHTML = pics[index]['comment'];
     document.getElementById('panelBody').src = pics[index]['pic'];
-    $( "#panel" ).hide();
   
     var options = {};
 	var randomNum = Math.floor(Math.random() * 7);
@@ -80,5 +85,4 @@ function changePic(){
 function showCurrentTime(event){
 	var ct = new Number(audio.currentTime);
 	document.getElementById('timeText').innerHTML = ct.toFixed(1)
-	getColorset(ct.toFixed(1));
 }

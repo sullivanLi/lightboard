@@ -1,7 +1,8 @@
 var id = [];
 var audio;
 var timeWorker ;
-var totalLength = 49;
+var totalLength = 42;
+var demo_time = 0.0;
 
 window.onload = function() {
   audio = document.getElementById('audioPlayer');
@@ -12,33 +13,27 @@ window.onload = function() {
  
 	  id[i] = 'td'+j+'_'+k;
   }
+  websocket_init("demo");
 }
 
-function play(){
-	var skipSec = document.getElementById('skipSec').value;
-	if(!isNaN(skipSec) && (skipSec > 0 && skipSec < 120)){
-		audio.currentTime = skipSec;
-	}
-	audio.play();
+function demo_open(){
+	document.getElementById('ws_status').innerHTML = 'Connection : connected !'
+	document.getElementById('timeGap').innerHTML = 'timeGap='+timeGap;
+	document.getElementById('responesTime').innerHTML = 'responseTimeMs='+responseTimeMs;
+}
+
+function demo_play(){
 	if(typeof(Worker)!=="undefined"){
 		if(typeof(timeWorker)=="undefined"){
-			timeWorker = new Worker("/light/assets/timeWorker.js");
+			timeWorker = new Worker("/assets/timeWorker.js");
 			timeWorker.postMessage();
 			timeWorker.onmessage = showCurrentTime;
 		}	
 	}	
 }
 
-function pause(){
-	audio.pause();
+function demo_pause(){
 	stopWorker();
-}
-
-function stop(){
-	audio.pause();
-	audio.currentTime=0;
-	stopWorker();
-	clear();
 }
 
 function stopWorker(){
@@ -48,16 +43,14 @@ function stopWorker(){
 	}
 }
 
-function getColorset(ct){
-	if(ct>97)return;
-	
-	var ct_dot = ct.substr(ct.length - 1)
-	if(ct_dot != 1 && ct_dot != 3 && ct_dot != 5 && ct_dot != 7 && ct_dot != 9){
-		return;
-	}
-	console.log("ct="+ct);
+function setTdColor(){
+	if(demo_time>237) stopWorker();
+		
+	cs =  getColorset(demo_time);
+	if(typeof(cs)=="undefined") return;
+
 	for(var i=0 ; i<id.length ; i++){
-		changeColor(id[i], timeScript[ct][id[i]]);
+		changeColor(id[i], cs[id[i]]);
 	}
 }
 
@@ -66,9 +59,9 @@ function changeColor(id, color){
 }
 
 function showCurrentTime(event){
-	var ct = new Number(audio.currentTime);
-	document.getElementById('timeText').innerHTML = ct.toFixed(1)
-	getColorset(ct.toFixed(1));
+	demo_time = demo_time + 0.1;
+	document.getElementById('timeText').innerHTML = demo_time
+	setTdColor();
 }
 
 function clear(){
