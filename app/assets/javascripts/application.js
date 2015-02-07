@@ -2,6 +2,8 @@
 //= require jquery-ui
 //= require bootstrap-sprockets
 //= require colorset
+//= require imgtextset
+//= require stepScript
 //= require websocket
-//= require ws_master
+//= require util
 //= require ws_client

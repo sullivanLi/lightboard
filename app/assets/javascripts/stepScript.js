@@ -1,0 +1,11 @@
+var step_setting = {}
+step_setting[0] = its_0;
+step_setting[1] = its_1;
+step_setting[2] = its_2;
+step_setting[3] = its_3;
+step_setting[4] = its_4;
+step_setting[5] = cs_black;
+step_setting[6] = cs_i;
+step_setting[7] = cs_love;
+step_setting[8] = cs_u;
+step_setting[9] = its_5;

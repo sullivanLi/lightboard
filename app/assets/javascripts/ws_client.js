@@ -1,59 +1,99 @@
 var timeWorker;
 var client_location;
 var client_time = 0.0;
+var now_step = 0;
+
+var btn_color = ["pink", "lightblue", "lightyellow", "lightgreen"];
+var btn_color_i = 0;
+var btnWorker;
 
 function client_init() {
-  websocket_init("client");
-  element_col = document.getElementById('col');
-  element_row = document.getElementById('row');
-  client_location = "td"+element_col.value+"_"+element_row.value;
+	if(typeof(client_location)=="undefined"){
+		alert("請先選位置");
+		return;
+	}
+ 	websocket_init("client");
 }
 
 function client_open(){
-	 document.getElementById('btn_connect').disabled=true;
-	document.getElementById('location').innerHTML = 'Location : '+ element_col.value + ' - ' + element_row.value;
-
-	document.getElementById('ws_status').innerHTML = 'Connection : connected !'
-	document.getElementById('timeGap').innerHTML = 'timeGap='+timeGap;
-	document.getElementById('responesTime').innerHTML = 'responseTimeMs='+responseTimeMs;
+	removeElement(document.getElementById('btn_connect'));
+	//removeElement(document.getElementById('location'));
+	removeElement(document.getElementById('selectTable'));
+	
+	//document.getElementById('ws_status').innerHTML = 'Connection : connected !'
+	//document.getElementById('timeGap').innerHTML = 'timeGap='+timeGap;
+	//document.getElementById('responesTime').innerHTML = 'responseTimeMs='+responseTimeMs;
+	
+	set_step();
 }
 
-function client_play(playTime){
-  now =  (new Date()).getTime() - timeGap;
-  if (now < playTime){
-	setTimeout("client_play()", playTime - now);
-	return;
-  }
-  if(typeof(Worker)!=="undefined"){
-    if(typeof(timeWorker)=="undefined"){
-	  timeWorker = new Worker("/assets/timeWorker.js");
-	  timeWorker.postMessage();
-	  timeWorker.onmessage = client_showCurrentTime;
-    }	
-  }	
+
+function change_step(step){
+	now_step = step;
+	set_step();
 }
 
-function client_pause(stopTime){
-    now =  (new Date()).getTime() - timeGap;
-    if (parseInt(now) < parseInt(stopTime)){
-  		setTimeout("client_pause()", stopTime - now);
-		return;
-    }
-	stopWorker();
+
+function set_step(){
+	clearbody();
+	if(step_setting[now_step][client_location]['type'] === 'color'){
+		document.body.style.backgroundColor = step_setting[now_step][client_location]['value'];
+	}else if(step_setting[now_step][client_location]['type'] === 'text'){
+		document.getElementById('textem').innerHTML = step_setting[now_step][client_location]['value'];
+	}else if(step_setting[now_step][client_location]['type'] === 'img'){
+		document.getElementById('showpic').src = step_setting[now_step][client_location]['value'];
+	}else if(step_setting[now_step][client_location]['type'] === 'btn'){
+		document.getElementById('btn_go').style.visibility="visible";
+		document.getElementById('btn_go').value = step_setting[now_step][client_location]['value'];
+	    if(typeof(Worker)!=="undefined"){
+	      if(typeof(btnWorker)=="undefined"){
+	  	  	btnWorker = new Worker("/assets/secWorker.js");
+	  	  	btnWorker.postMessage();
+	  	  	btnWorker.onmessage = btn_change_color;
+	      }	
+	    }	
+	}	
 }
 
-function client_showCurrentTime(event){
-  client_time = client_time + 0.1;
-  document.getElementById('timeText').innerHTML = client_time;
-  document.getElementById('time').innerHTML = (new Date()).getTime();
-  setBodyColor();
+function clearbody(){
+	document.body.style.backgroundColor = 'black';
+	document.getElementById('textem').innerHTML = '';
+	document.getElementById('showpic').src = '';
+	document.getElementById('btn_go').style.visibility="hidden";
+	if(typeof(timeWorker)!=="undefined"){
+		btnWorker.terminate();
+		btnWorker = undefined;
+	}
 }
 
-function setBodyColor(){
-	if(client_time>237) stopWorker();
+function selectClient(location){
+	client_location = 'L'+location;
+	document.getElementById('location').innerHTML = location;
+}
 
-	cs =  getColorset(client_time);
-	if(typeof(cs)=="undefined") return;
 
-	document.body.style.backgroundColor = cs[client_location];
+function btn_change_color(event){
+	if(btn_color_i > 3) btn_color_i = 0;
+ 	document.getElementById('btn_go').style.backgroundColor=btn_color[btn_color_i];
+	btn_color_i = btn_color_i + 1;
+}
+
+function send_step(){
+	step = parseInt(now_step) + 1;
+	ws.send("STEP="+step);
+}
+
+
+function testing(){
+	
+	if(typeof(now_step)=="undefined"){
+		now_step = 0;
+		removeElement(document.getElementById('selectTable'));
+		removeElement(document.getElementById('location'));
+	}
+	console.log(now_step)
+	console.log(step_setting[now_step][client_location])
+	set_step();
+	now_step = now_step + 1;
+	
 }
